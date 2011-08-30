@@ -1,0 +1,6 @@
+Before the following operations, make sure that the micro parameters defined in the corresponding file are set properly.
+
+To create evaluation databases, run database_testbed/make-all.sh.
+
+To deploy databases to local nodes, list their IP addresses or host names in the file node.list and run deploy.sh.
+

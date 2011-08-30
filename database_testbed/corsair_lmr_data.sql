@@ -1,13 +1,10 @@
-﻿-- ----------------------------------------------
+-- ----------------------------------------------
 -- 本文件用于向local manager填充随机测试数据
 -- Prerequisite: corsair_lmr_db_core.sql has been run.
 -- Author: Jinglei Ren
 -- Email: jinglei.ren.china@gmail.com
 -- Date: 2010/03/22
 -- ---------------------------------------------
-
--- 更改下面一行为在corsair_lmr_db_core.sql中创建的数据库名并运行
-USE corsair_lmr; # 按照corsair_lmr_db_core.sql中要求，应为corsair_lmr_thu 或 corsair_lmr_szu
 
 -- 更改分隔符为"//"，即遇"//"才执行
 DELIMITER //
@@ -51,7 +48,7 @@ BEGIN
       NULL,
       rand_str,
       rand_str, 
-      concat(rand_str, '@gmail.com'),
+      concat(rand_str, '@university.edu'),
       rand_str,
       'Registered',
       0,
@@ -80,7 +77,7 @@ BEGIN
 END;
 
 -- --------------------------------------------------
--- 填充jos_community_admin表的存储过程
+-- 填充josersity_community_admin表的存储过程
 -- Parameters:
 --   commu_cnt: the number of communities to generate
 -- --------------------------------------------------
@@ -122,7 +119,7 @@ DROP PROCEDURE IF EXISTS insert_lmr_commu_patch;
 CREATE PROCEDURE insert_lmr_commu_patch ()
 BEGIN
   INSERT INTO lmr_commu_patch 
-  SELECT comm_id, comm_name, concat(comm_name, '@university.myschool.com'), NOW()
+  SELECT comm_id, comm_name, concat(comm_name, '@university.edu'), NOW()
   FROM jos_community_admin;
 END;
 
@@ -325,7 +322,7 @@ BEGIN
       rand_str,
       rand_str,
       owner_id,
-      concat(rand_str, '@university.myschool.com'),
+      concat(rand_str, '@university.edu'),
       'group for test',
       NOW(),
       TRUE,

@@ -1,4 +1,4 @@
-﻿-- ------------------------------------------------
+-- ------------------------------------------------
 -- 本文件用于在super manager创建数据库表
 -- Author: Jinglei Ren
 -- Email: jinglei.ren.china@gmail.com
@@ -6,6 +6,7 @@
 -- Modified Date: 2010-6-1
 -- ------------------------------------------------
 
+DROP DATABASE IF EXISTS corsair_smr;
 CREATE DATABASE corsair_smr;
 USE corsair_smr;
 
@@ -120,7 +121,7 @@ CREATE TABLE IF NOT EXISTS smr_overall_grp (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 # DROP TABLE smr_grp_commu;
-CREATE TABLE smr_grp_commu (
+CREATE TABLE IF NOT EXISTS smr_grp_commu (
   id int unsigned NOT NULL AUTO_INCREMENT,
   commu_mgr_id char(5) NOT NULL,
   commu_local_id int unsigned NOT NULL,
@@ -144,7 +145,7 @@ CREATE TABLE smr_grp_commu (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 # DROP TABLE smr_grp_relation 
-CREATE TABLE smr_grp_relation (
+CREATE TABLE IF NOT EXISTS smr_grp_relation (
   id int unsigned NOT NULL AUTO_INCREMENT,
   local_mgr_id char(5) NOT NULL,
   inter_grp_id int unsigned NOT NULL,

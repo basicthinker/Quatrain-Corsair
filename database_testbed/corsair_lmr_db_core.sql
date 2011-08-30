@@ -1,24 +1,10 @@
-﻿-- ------------------------------------------------------------------
--- 本文件用于在local manager创建数据库表（包含对原数据库表增设主外键）
--- Author: Jinglei Ren
--- Email: jinglei.ren.china@gmail.com
--- Create Date: 2010/03/21
--- Last Modified: 2010/04/28
--- ------------------------------------------------------------------
-
--- 创建数据库，以学校名后缀
-
-CREATE DATABASE corsair_lmr; -- 注意需更改名称后运行，如corsair_lmr_thu, corsair_lmr_szu
-USE corsair_lmr;  -- 保持与上一行同名
-
-
--- 原有数据库表保持不变，共7张
 
 --
 -- Table structure for table `jos_users`
 --
 
-CREATE TABLE IF NOT EXISTS `jos_users` (
+DROP TABLE IF EXISTS `jos_users`;
+CREATE TABLE `jos_users` (
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(255) NOT NULL default '',
   `username` varchar(150) NOT NULL default '',
@@ -47,7 +33,8 @@ CREATE TABLE IF NOT EXISTS `jos_users` (
 -- Table structure for table `jos_community_admin`
 --
 
-CREATE TABLE IF NOT EXISTS `jos_community_admin` (
+DROP TABLE IF EXISTS `jos_community_admin`;
+CREATE TABLE `jos_community_admin` (
   `comm_id` int(11) NOT NULL auto_increment,
   `comm_name` varchar(255) NOT NULL,
   `userid` int(11) NOT NULL,
@@ -65,7 +52,8 @@ CREATE TABLE IF NOT EXISTS `jos_community_admin` (
 -- Table structure for table `jos_community_apply`
 --
 
-CREATE TABLE IF NOT EXISTS `jos_community_apply` (
+DROP TABLE IF EXISTS `jos_community_apply`;
+CREATE TABLE `jos_community_apply` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `msg` text NOT NULL,
@@ -78,8 +66,8 @@ CREATE TABLE IF NOT EXISTS `jos_community_apply` (
 --
 -- Table structure for table `jos_community_user`
 --
-
-CREATE TABLE IF NOT EXISTS `jos_community_user` (
+DROP TABLE IF EXISTS `jos_community_user`;
+CREATE TABLE `jos_community_user` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `comm_id` int(11) NOT NULL,
@@ -92,7 +80,8 @@ CREATE TABLE IF NOT EXISTS `jos_community_user` (
 -- Table structure for table `vfs_space`
 --
 
-CREATE TABLE IF NOT EXISTS `vfs_space` (
+DROP TABLE IF EXISTS `vfs_space`;
+CREATE TABLE `vfs_space` (
   `sid` bigint(64) NOT NULL auto_increment,
   `sname` varchar(256) NOT NULL,
   `spass` varchar(256) NOT NULL,
@@ -112,7 +101,8 @@ CREATE TABLE IF NOT EXISTS `vfs_space` (
 -- Table structure for table `vfs_user_spacemap`
 --
 
-CREATE TABLE IF NOT EXISTS `vfs_user_spacemap` (
+DROP TABLE IF EXISTS `vfs_user_spacemap`;
+CREATE TABLE `vfs_user_spacemap` (
   `id` int(11) NOT NULL,
   `sid` bigint(64) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -123,7 +113,8 @@ CREATE TABLE IF NOT EXISTS `vfs_user_spacemap` (
 -- Table structure for table `vfs_community_spacemap`
 --
 
-CREATE TABLE IF NOT EXISTS `vfs_community_spacemap` (
+DROP TABLE IF EXISTS `jvfs_community_spacema`;
+CREATE TABLE `vfs_community_spacemap` (
   `comm_id` int(11) NOT NULL,
   `sid` bigint(64) NOT NULL,
   `stype` smallint(4) NOT NULL

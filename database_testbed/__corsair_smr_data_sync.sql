@@ -1,21 +1,3 @@
-﻿-- ----------------------------------------------
--- 本文件用于向supper manager填充随机测试数据
--- Prerequisites: corsair_smr_db.sql has been run.
---   The databases corsair_lmr_thu and corsair_lmr_szu for local managers have been established. 
--- Author: Jinglei Ren
--- Email: jinglei.ren.china@gmail.com
--- Date: 2010/03/23
--- ---------------------------------------------
-
--- 更改下面一行为在corsair_smr_db.sql中创建的数据库名并运行
-USE corsair_smr;
-
--- 防止中文乱码
-SET character_set_client = GBK;
-
--- 更改分隔符为"//"，即遇"//"才执行
-DELIMITER //
-
 -- ------------------------------------------------------------ 
 -- 生成随机字符串的函数
 -- Parameters:
@@ -35,54 +17,6 @@ BEGIN
         SET i = i + 1;
     END WHILE;
     RETURN return_str;
-END;
-
--- -------------------------------------- 
--- 填充smr_local_mgr表的存储过程
--- 依据教育部高校代码
--- --------------------------------------
-DROP PROCEDURE IF EXISTS insert_smr_local_mgr;
-CREATE PROCEDURE insert_smr_local_mgr ()
-BEGIN
-  INSERT INTO smr_local_mgr VALUES (
-    10003, '清华大学', '各种无敌！'
-  );
-
-  INSERT INTO smr_local_mgr VALUES (
-    10590, '深圳大学', ''
-  );
-END;
-
--- --------------------------------------------
--- 填充smr_overall_user表的存储过程
--- --------------------------------------------
-DROP PROCEDURE IF EXISTS insert_smr_overall_user;
-CREATE PROCEDURE insert_smr_overall_user()
-BEGIN
-  -- 同步清华大学节点用户
-  INSERT INTO smr_overall_user SELECT 10003, id, name, username, password, email, phone, sync_time 
-  FROM corsair_lmr_thu.jos_users JOIN corsair_lmr_thu.lmr_user_patch ON lmr_user_patch.user_id = jos_users.id;
-  
-  -- 同步深圳大学节点用户
-  INSERT INTO smr_overall_user SELECT 10590, id, name, username, password, email, phone, sync_time
-  FROM corsair_lmr_szu.jos_users JOIN corsair_lmr_szu.lmr_user_patch ON lmr_user_patch.user_id = jos_users.id;
-END;
-
--- --------------------------------------------
--- 填充smr_overall_commu表的存储过程
--- --------------------------------------------
-DROP PROCEDURE IF EXISTS insert_smr_overall_commu;
-CREATE PROCEDURE insert_smr_overall_commu()
-BEGIN
-  -- 同步清华大学节点社区
-  INSERT INTO smr_overall_commu SELECT 10003, comm_id, comm_name, alias, userid, email, phone, introduction, FALSE, TRUE, sync_time 
-  FROM corsair_lmr_thu.jos_community_admin JOIN corsair_lmr_thu.lmr_commu_patch 
-  ON lmr_commu_patch.community_id = jos_community_admin.comm_id;
-  
-  -- 同步深圳大学节点用户
-  INSERT INTO smr_overall_commu SELECT 10590, comm_id, comm_name, alias, userid, email, phone, introduction, FALSE, TRUE, sync_time 
-  FROM corsair_lmr_szu.jos_community_admin JOIN corsair_lmr_szu.lmr_commu_patch 
-  ON lmr_commu_patch.community_id = jos_community_admin.comm_id;
 END;
 
 -- -------------------------------------------------------------------------
@@ -159,7 +93,7 @@ BEGIN
       rand_str,
       @owner_mgr_id,
       @owner_local_id,
-      concat(rand_str, '@myschool.com'),
+      concat(rand_str, '@university.edu'),
       'global group for test',
       NOW(),
       TRUE
@@ -259,6 +193,7 @@ BEGIN
   DELETE FROM smr_global_grp;
   DELETE FROM smr_overall_grp;
   DELETE FROM smr_overall_user;
+
   DELETE FROM smr_local_mgr;
 END;
 
