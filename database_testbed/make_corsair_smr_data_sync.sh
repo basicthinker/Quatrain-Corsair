@@ -46,3 +46,5 @@ echo >> corsair_smr_data_sync.sql
 
 cat __corsair_smr_data_sync.sql >> corsair_smr_data_sync.sql
 
+echo "CALL sp_fill_data($CROSS_USER_COMMU, 0, 0, 0);" >> corsair_smr_data_sync.sql
+
