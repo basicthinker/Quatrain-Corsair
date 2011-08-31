@@ -46,6 +46,16 @@ done
 echo "END;" >> corsair_smr_data_sync.sql
 echo >> corsair_smr_data_sync.sql
 
+echo "DROP PROCEDURE IF EXISTS insert_smr_overall_grp;" >> corsair_smr_data_sync.sql
+echo "CREATE PROCEDURE insert_smr_overall_grp ()" >> corsair_smr_data_sync.sql
+echo "BEGIN" >> corsair_smr_data_sync.sql
+for ((i=1; i<=$LOCAL_CNT; i++))
+do
+  echo "  INSERT INTO smr_overall_grp SELECT $((i+10000)), id, name, alias, owner_id, email, description, TRUE, sync_time FROM corsair_lmr_$i.lmr_group;" >> corsair_smr_data_sync.sql
+done
+echo "END;" >> corsair_smr_data_sync.sql
+echo >> corsair_smr_data_sync.sql
+
 cat __corsair_smr_data_sync.sql >> corsair_smr_data_sync.sql
 
 echo "CALL sp_fill_data(0, $SMR_COMMU_GRP, 0, 0);" >> corsair_smr_data_sync.sql

@@ -102,23 +102,6 @@ BEGIN
   END WHILE;
 END;
 
--- ---------------------------------------------------
--- 填充smr_overall_grp表的存储过程
--- ---------------------------------------------------
-DROP PROCEDURE IF EXISTS insert_smr_overall_grp;
-CREATE PROCEDURE insert_smr_overall_grp ()
-BEGIN
-  DECLARE CONTINUE HANDLER FOR SQLEXCEPTION BEGIN END;
-  
-  INSERT INTO smr_overall_grp 
-  SELECT 10003, id, name, alias, owner_id, email, description, TRUE, sync_time
-  FROM corsair_lmr_thu.lmr_group;
-  
-  INSERT INTO smr_overall_grp 
-  SELECT 10590, id, name, alias, owner_id, email, description, TRUE, sync_time
-  FROM corsair_lmr_szu.lmr_group;
-END;
-
 -- -------------------------------------------------------------------------------
 -- 填充smr_grp_commu表的存储过程
 -- Parameters:
