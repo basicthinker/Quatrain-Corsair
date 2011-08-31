@@ -17,7 +17,7 @@ for host in `cat ../node.list`
 do
   ((i++))
   echo "  INSERT INTO smr_local_mgr VALUES (" >> corsair_smr_data_sync.sql
-  echo "    $((i+10000)), 'University$i', '$host'" >> corsair_smr_data_sync.sql
+  echo "    $((i+10000)), 'UniversityName$i', 'univ$i', '$host', '$i', 'Sms number is invalid.'" >> corsair_smr_data_sync.sql
   echo "  );" >> corsair_smr_data_sync.sql
 done
 echo "END;" >> corsair_smr_data_sync.sql

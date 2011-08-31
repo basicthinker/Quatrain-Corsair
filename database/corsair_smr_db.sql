@@ -14,7 +14,10 @@ USE corsair_smr;
 CREATE TABLE IF NOT EXISTS smr_local_mgr (
   id char(5) NOT NULL,
   name varchar(50) NOT NULL,
-  description varchar(255),
+  namespace varchar(20) NOT NULL,
+  ip_address varchar(50),
+  sms_number varchar(20),
+  remarks varchar(255),
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
