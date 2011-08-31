@@ -15,9 +15,13 @@ do
   cat corsair_lmr_data.sql > temp.sql
   echo "CALL sp_fill_lmr_db_core($LOCAL_USER_CNT, $LOCAL_COMMU_CNT, 0, $USER_COMMU_CNT, 0, 0);" >> temp.sql
   mysql -u $DB_USER -p$DB_PASSWD -D corsair_lmr_$i < temp.sql
+
+  mysql -u $DB_USER -p$DB_PASSWD -D corsair_lmr_$i < corsair_lmr_sp.sql
 done
 
 ./make_corsair_smr_data_sync.sh
 mysql -u $DB_USER -p$DB_PASSWD < corsair_smr_data_sync.sql
+
+mysql -u $DB_USER -p$DB_PASSWD < corsair_smr_sp.sql
 
 rm temp.sql
