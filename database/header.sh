@@ -5,7 +5,7 @@ DB_PASSWD='tsinghua'
 
 LOCAL_CNT=3
 check=0
-for host in `cat ../node.list`
+for host in `cat node.list`
 do
   ((check++))
 done
