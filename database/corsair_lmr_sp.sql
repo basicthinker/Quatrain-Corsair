@@ -333,5 +333,24 @@ BEGIN
   WHERE lmr_user_patch.phone = user_phone;
 END;
 
+-- ------------------------------------------
+-- 增补于 2011-9-1
+-- -------------------------------------------
+-- 通过本地社区ID获得其本地用户手机号的存储过程
+-- Parameters:
+--   commu_id: target community id
+-- Returns:
+--   phone numbers of all its users
+-- -------------------------------------------
+DROP PROCEDURE IF EXISTS sp_fetch_user_phone_by_commu;
+CREATE PROCEDURE sp_fetch_user_phone_by_commu(IN commu_id INT(11))
+BEGIN
+  SELECT DISTINCT phone 
+  FROM lmr_user_patch AS U 
+    JOIN jos_community_user AS CU
+    ON U.user_id = CU.id
+  WHERE CU.comm_id = commu_id;
+END;
+
 //
 DELIMITER ;
