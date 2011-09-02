@@ -352,5 +352,27 @@ BEGIN
   WHERE CU.comm_id = commu_id;
 END;
 
+-- -------------------------------------------
+-- 增补于 2011-9-2
+-- -------------------------------------------
+-- 通过本地通讯组ID号获得其本地用户手机号的存储过程
+-- Parameters:
+--   grp_id: target group id
+-- Returns:
+--   phone numbers of all its users
+-- -------------------------------------------
+DROP PROCEDURE IF EXISTS sp_fetch_user_phone_by_grp;
+CREATE PROCEDURE sp_fetch_user_phone_by_grp(IN grp_id INT(11))
+BEGIN
+  SELECT DISTINCT phone 
+  FROM lmr_user_patch AS U 
+    JOIN jos_community_user AS CU 
+    ON U.user_id = CU.id AND CU.comm_id IN (
+      SELECT community_id 
+      FROM lmr_grp_commu AS GC 
+      WHERE GC.group_id = grp_id
+    );
+END;
+
 //
 DELIMITER ;
