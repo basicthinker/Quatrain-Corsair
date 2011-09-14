@@ -42,8 +42,9 @@ CREATE TABLE `jos_community_admin` (
   `introduction` text NOT NULL,
   `date` datetime NOT NULL,
   `phone` bigint(15) NOT NULL default '0',
-  PRIMARY KEY  (`comm_id`),
-  UNIQUE KEY `name` (`comm_name`,`userid`)
+  PRIMARY KEY  (`comm_id`)
+-- ,
+--  UNIQUE KEY `name` (`comm_name`,`userid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=123480 ;
 
 -- --------------------------------------------------------
@@ -135,6 +136,7 @@ ALTER TABLE vfs_space ENGINE = InnoDB;
 ALTER TABLE vfs_user_spacemap ENGINE = InnoDB;
 ALTER TABLE vfs_community_spacemap ENGINE = InnoDB;
 
+/*
 ALTER TABLE jos_community_admin
 ADD CONSTRAINT fk_jos_commu_admin_userid
 FOREIGN KEY (userid) REFERENCES jos_users(id) 
@@ -203,6 +205,7 @@ ON UPDATE CASCADE ON DELETE CASCADE;
 ALTER TABLE vfs_user_spacemap
 ADD CONSTRAINT pk_vfs_user_spacemap
 PRIMARY KEY (sid, id);
+*/
 
 -- 
 -- 创建本地用户增补表lmr_user_patch
@@ -211,10 +214,11 @@ PRIMARY KEY (sid, id);
 CREATE TABLE IF NOT EXISTS lmr_user_patch (
   user_id int(11) NOT NULL PRIMARY KEY,
   phone varchar(20),
-  sync_time timestamp NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES jos_users(id)
-    ON UPDATE CASCADE
-    ON DELETE CASCADE 
+  sync_time timestamp NOT NULL
+-- ,
+--  FOREIGN KEY (user_id) REFERENCES jos_users(id)
+--    ON UPDATE CASCADE
+--    ON DELETE CASCADE 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- 
@@ -225,10 +229,11 @@ CREATE TABLE IF NOT EXISTS lmr_commu_patch (
   community_id int(11) NOT NULL PRIMARY KEY,
   alias varchar(20) NOT NULL,
   email varchar(100) NOT NULL,
-  sync_time timestamp NOT NULL,
-  FOREIGN KEY (community_id) REFERENCES jos_community_admin(comm_id)
-    ON UPDATE CASCADE
-    ON DELETE CASCADE
+  sync_time timestamp NOT NULL
+-- ,
+--  FOREIGN KEY (community_id) REFERENCES jos_community_admin(comm_id)
+--    ON UPDATE CASCADE
+--    ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- 
@@ -244,10 +249,11 @@ CREATE TABLE IF NOT EXISTS lmr_group (
   description varchar(255),
   create_time datetime NOT NULL,
   is_approved boolean NOT NULL DEFAULT TRUE,
-  sync_time timestamp NOT NULL,
-  FOREIGN KEY (owner_id) REFERENCES jos_users(id)
-    ON UPDATE CASCADE
-    ON DELETE CASCADE
+  sync_time timestamp NOT NULL
+-- ,
+--  FOREIGN KEY (owner_id) REFERENCES jos_users(id)
+--    ON UPDATE CASCADE
+--    ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- 
@@ -260,13 +266,14 @@ CREATE TABLE IF NOT EXISTS lmr_grp_commu (
   description varchar(255),
   create_time datetime NOT NULL,
   is_approved boolean NOT NULL DEFAULT TRUE,
-  PRIMARY KEY (group_id, community_id),
-  FOREIGN KEY (community_id) REFERENCES jos_community_admin(comm_id)
+  PRIMARY KEY (group_id, community_id)
+-- ,
+/*  FOREIGN KEY (community_id) REFERENCES jos_community_admin(comm_id)
     ON UPDATE CASCADE
     ON DELETE CASCADE,
   FOREIGN KEY (group_id) REFERENCES lmr_group(id)
     ON UPDATE CASCADE
-    ON DELETE CASCADE
+    ON DELETE CASCADE */
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- 
@@ -279,9 +286,10 @@ CREATE TABLE IF NOT EXISTS lmr_file (
   type tinyint NOT NULL,
   host_ip varchar(40) NOT NULL,
   url varchar(255) NOT NULL,
-  home_dir varchar(255) NOT NULL,
-  FOREIGN KEY (commu_id) REFERENCES jos_community_admin(comm_id)
-    ON UPDATE CASCADE
+  home_dir varchar(255) NOT NULL
+-- ,
+--  FOREIGN KEY (commu_id) REFERENCES jos_community_admin(comm_id)
+--    ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- -------------------------------------------------------
