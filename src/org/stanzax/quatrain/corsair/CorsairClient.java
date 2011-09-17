@@ -26,7 +26,7 @@ public class CorsairClient {
 		this.log = log;
 	}
 	
-	public double evaQuery() {
+	public double[] evaQuery() {
 		ReplySet groups = remote.invoke(Integer.class, "GetLocalGroupList");
 		Integer groupID;
 		ArrayList<Integer> groupList = new ArrayList<Integer>();
@@ -35,13 +35,22 @@ public class CorsairClient {
 		}
 		groups.close();
 		
-		double totalTime = 0;
+		double normalTime = 0, mrTime = 0;
 		int grpCnt = 0;
 		for (Integer group : groupList) {
-			totalTime += evaInvoke("GetGroupAllUserPhone", group);
+			ArrayList<Double> normalTimes = new ArrayList<Double>();
+			ArrayList<Double> mrTimes = new ArrayList<Double>();
+			for (int i = 0; i < 3; ++i) {
+				normalTimes.add(evaInvoke("GetGroupAllUserPhone", group));
+				mrTimes.add(evaInvoke("MrGetGroupAllUserPhone", group));
+			}
+			Collections.sort(normalTimes);
+			Collections.sort(mrTimes);
+			normalTime += normalTimes.get(1);
+			mrTime += mrTimes.get(1);
 			++grpCnt;
 		} 
-		return totalTime / grpCnt;
+		return new double[]{normalTime / grpCnt, mrTime / grpCnt};
 	}
 
 	private double evaInvoke(String method, int grpID) {
@@ -67,7 +76,7 @@ public class CorsairClient {
 			avg /= phoneList.size();
 		}
 		
-		log.print(grpID + "\t");
+		log.print(method + ":\t" + grpID + "\t");
 		log.print(phoneList.size() + "\t" + avg + "\t");
 		Collections.sort(phoneList); // for convenience of correctness verification
 		for (String element : phoneList) {
@@ -98,10 +107,10 @@ public class CorsairClient {
 			CorsairClient client = new CorsairClient(
 					InetAddress.getByName(args[0]), port, timeout, log);
 			
-			Double latency = client.evaQuery();
-			log.close();
+			double[] latency = client.evaQuery();
+			System.out.println(latency[0] + "\t" + latency[1]);
 			
-			System.out.println(latency.toString());
+			log.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
