@@ -33,6 +33,7 @@ public class CorsairServer extends MrServer {
 			int handlerCount, DBAgent db, long timeout) throws IOException {
 		super(address, port, wrapper, handlerCount);
 		this.localIP = address;
+		this.port = port;
 		this.db = db;
 		this.timeout = timeout;
 	}
@@ -66,7 +67,7 @@ public class CorsairServer extends MrServer {
 		String[] commuPlusAddr;
 		for (String commu : commuList) {
 			commuPlusAddr = commu.split("@");
-			final String commuID = commuPlusAddr[0];
+			final int commuID = Integer.parseInt(commuPlusAddr[0]);
 			final String host = commuPlusAddr[1];
 			new Thread(new Runnable() {
 
@@ -75,7 +76,7 @@ public class CorsairServer extends MrServer {
 					try {
 						MrClient remote = new MrClient(
 								InetAddress.getByName(host), 
-								grpID, new HproseWrapper(), timeout);
+								port, new HproseWrapper(), timeout);
 						ReplySet rs = remote.invoke(String.class, "GetCommuLocalUserPhone", commuID);
 						ArrayList<String> phones = new ArrayList<String>();
 						String phone;
@@ -102,7 +103,7 @@ public class CorsairServer extends MrServer {
 		String[] commuPlusAddr;
 		for (String commu : commuList) {
 			commuPlusAddr = commu.split("@");
-			final String commuID = commuPlusAddr[0];
+			final int commuID = Integer.parseInt(commuPlusAddr[0]);
 			final String host = commuPlusAddr[1];
 			new java.lang.Thread(new Runnable() {
 
@@ -111,7 +112,7 @@ public class CorsairServer extends MrServer {
 					try {
 						MrClient remote = new MrClient(
 								InetAddress.getByName(host), 
-								grpID, new HproseWrapper(), timeout);
+								port, new HproseWrapper(), timeout);
 						ReplySet rs = remote.invoke(String.class, "GetCommuLocalUserPhone", commuID);
 						String phone;
 						while ((phone = (String) rs.nextElement()) != null) {
@@ -150,6 +151,7 @@ public class CorsairServer extends MrServer {
 	private DBAgent db;
 	private long timeout;
 	String localIP;
+	int port;
 	
 	/**
 	 * @param args
