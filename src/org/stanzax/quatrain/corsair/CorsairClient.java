@@ -26,7 +26,7 @@ public class CorsairClient {
 		this.log = log;
 	}
 	
-	public double[] evaQuery() {
+	public double[] evaQuery(int limit) {
 		ReplySet groups = remote.invoke(Integer.class, "GetLocalGroupList");
 		Integer groupID;
 		ArrayList<Integer> groupList = new ArrayList<Integer>();
@@ -36,11 +36,15 @@ public class CorsairClient {
 		groups.close();
 		
 		double normalTime = 0, mrTime = 0;
-		int grpCnt = 0;
-		for (Integer group : groupList) {
+		if (limit > groupList.size()) {
+			limit = groupList.size();
+		}
+		int group;
+		for (int i = 0; i < limit; ++i) {
+			group = groupList.get(i);
 			ArrayList<Double> normalTimes = new ArrayList<Double>();
 			ArrayList<Double> mrTimes = new ArrayList<Double>();
-			for (int i = 0; i < 3; ++i) {
+			for (int j = 0; j < 3; ++j) {
 				normalTimes.add(evaInvoke("GetGroupAllUserPhone", group));
 				mrTimes.add(evaInvoke("MrGetGroupAllUserPhone", group));
 			}
@@ -48,9 +52,8 @@ public class CorsairClient {
 			Collections.sort(mrTimes);
 			normalTime += normalTimes.get(1);
 			mrTime += mrTimes.get(1);
-			++grpCnt;
 		} 
-		return new double[]{normalTime / grpCnt, mrTime / grpCnt};
+		return new double[]{normalTime / limit, mrTime / limit};
 	}
 
 	private double evaInvoke(String method, int grpID) {
@@ -94,11 +97,13 @@ public class CorsairClient {
 	 * @param args
 	 * 	args[0] Remote server address
 	 * 	args[1]	Remote port number
-	 * 	args[2]	Timeout
+	 * 	args[2]	Limit number of test groups
+	 *  args[3] Timeout
 	 */
 	public static void main(String[] args) {
 		int port = Integer.valueOf(args[1]);
-		long timeout = Long.valueOf(args[2]);
+		int limit = Integer.valueOf(args[2]);
+		long timeout = Long.valueOf(args[3]);
 		try {
 			PrintStream log = new PrintStream(
 					new File("corsair-client-" + args[0] + "@" + (int)System.currentTimeMillis()));
@@ -107,7 +112,7 @@ public class CorsairClient {
 			CorsairClient client = new CorsairClient(
 					InetAddress.getByName(args[0]), port, timeout, log);
 			
-			double[] latency = client.evaQuery();
+			double[] latency = client.evaQuery(limit);
 			System.out.println(latency[0] + "\t" + latency[1]);
 			
 			log.close();
