@@ -21,7 +21,15 @@ else
   done
   mysql -u $DB_USER -p$DB_PASSWD < tmp.sql
   rm tmp.sql
-  mysqldump -u $DB_USER -p$DB_PASSWD --all-databases --add-drop-database > $DB_FILE
+
+  DB_NAMES="corsair_smr"
+  i=1
+  for node in $NODE_LIST
+  do
+    DB_NAMES=$DB_NAMES" corsair_lmr_$i"
+    ((++i))
+  done
+  mysqldump -u $DB_USER -p$DB_PASSWD --databases $DB_NAMES --add-drop-database > $DB_FILE
 fi
 
 if [ ! -f ~/.ssh/id_dsa.pub ]; then
