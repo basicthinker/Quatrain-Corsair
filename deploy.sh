@@ -45,6 +45,8 @@ do
 done
 echo "<<< Setting finished!"
 
+read -p "Press any key to continue..."
+
 echo ">>> Begin JDK isntallation..."
 for node in $NODE_LIST
 do
@@ -69,6 +71,8 @@ done
 wait
 echo "<<< Copying finished!"
 
+read -p "Press any key to continue..."
+
 echo ">>> Begin DB restore..."
 for node in $NODE_LIST
 do
@@ -77,6 +81,8 @@ do
 done
 wait
 echo "<<< DB restore finished!"
+
+read -p "Press any key to continue..."
 
 echo ">>> Begin starting services..."
 i=1
