@@ -2,9 +2,9 @@
 
 DB_USER='root'
 DB_PASSWD='tsinghua'
-V_OPTION='-vvv' # manually output progress
+V_OPTION='' # manually output progress
 
-LOCAL_CNT=15
+LOCAL_CNT=10
 check=0
 for host in `cat ../node.list`
 do
@@ -24,5 +24,5 @@ LMR_USR_COMMU=24253
 LMR_GRP_CNT=$REAL_LMR_COMMU
 LMR_COMMU_GRP=$LMR_COMMU_CNT
 
-SMR_COMMU_GRP=$((LMR_GRP_CNT * LOCAL_CNT * (LOCAL_CNT / 3)))
+SMR_COMMU_GRP=$((LMR_GRP_CNT * LOCAL_CNT * (LOCAL_CNT / 2)))
 

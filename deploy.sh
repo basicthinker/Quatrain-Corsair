@@ -85,13 +85,19 @@ echo "<<< DB restore finished!"
 read -p "Press any key to continue..."
 
 echo ">>> Begin starting services..."
+
+for node in $NODE_LIST
+do
+  scp corsair-server.jar root@$node:~/ &
+  scp corsair-client.jar root@$node:~/ &
+  scp mysql-connector-java-5.1.17-bin.jar root@$node:/usr/lib/jvm/default-java/jre/lib/ext/ &
+done
+wait
+
 i=1
 for node in $NODE_LIST
 do
-  scp corsair-server.jar root@$node:~/
-  scp corsair-client.jar root@$node:~/
-  scp mysql-connector-java-5.1.17-bin.jar root@$node:/usr/lib/jvm/default-java/jre/lib/ext/
-  ssh root@$node "nohup java -jar ~/corsair-server.jar $node $PORT 30 corsair_lmr_$i $DB_USER $DB_PASSWD 10000 > ~/server.output 2 >& 1 &"
+  ssh root@$node "nohup java -jar ~/corsair-server.jar $node $PORT 100 corsair_lmr_$i $DB_USER $DB_PASSWD 20000 > ~/server.output 2 >& 1 &"
   ssh root@$node "sleep 1; cat ~/server.output"
   ((++i))
 done
