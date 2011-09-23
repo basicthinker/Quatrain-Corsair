@@ -43,16 +43,20 @@ public class DBAgent {
 		}
 	}
 	
+	public String getDBName() {
+		return lmrDBName;
+	}
+	
 	/**
 	 * for SMR
 	 * */
-	public String[] getGroupExternalCommu(String lmrIP, int grpID) {
+	public String[] getGroupExternalCommu(String lmrName, int grpID) {
 		try {
 			CallableStatement cs = smrConn.prepareCall(
 					"{call sp_fetch_grp_xtnl_commu(?, ?)}",
 					ResultSet.TYPE_SCROLL_INSENSITIVE,
 					ResultSet.CONCUR_READ_ONLY);
-			cs.setString(1, lmrIP);
+			cs.setString(1, lmrName);
 			cs.setInt(2, grpID);
 			ResultSet rs = cs.executeQuery();
 			rs.last();

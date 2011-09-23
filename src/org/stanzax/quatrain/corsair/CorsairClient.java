@@ -106,7 +106,8 @@ public class CorsairClient {
 		long timeout = Long.valueOf(args[3]);
 		try {
 			PrintStream log = new PrintStream(
-					new File("corsair-client-" + args[0] + "@" + (int)System.currentTimeMillis()));
+					new File("log-corsair-client-" + args[0] + "@" + 
+							String.valueOf(System.currentTimeMillis()).substring(4)));
 			log.println("# GroupID\tPhoneCount\tAvgResponseTime\t\tPhoneList");
 			
 			CorsairClient client = new CorsairClient(

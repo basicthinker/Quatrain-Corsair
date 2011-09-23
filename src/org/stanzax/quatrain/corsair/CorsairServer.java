@@ -32,7 +32,7 @@ public class CorsairServer extends MrServer {
 	public CorsairServer(String address, int port, WritableWrapper wrapper,
 			int handlerCount, DBAgent db, long timeout) throws IOException {
 		super(address, port, wrapper, handlerCount);
-		this.localIP = address;
+		this.nodeName = db.getDBName().replace("corsair_lmr_", "UniversityName");
 		this.port = port;
 		this.db = db;
 		this.timeout = timeout;
@@ -63,7 +63,7 @@ public class CorsairServer extends MrServer {
 	 * */	
 	public void MrGetGroupAllUserPhone(final int grpID) {
 		preturn(db.getGroupLocalUserPhone(grpID));
-		String[] commuList = db.getGroupExternalCommu(localIP, grpID);
+		String[] commuList = db.getGroupExternalCommu(nodeName, grpID);
 		String[] commuPlusAddr;
 		for (String commu : commuList) {
 			commuPlusAddr = commu.split("@");
@@ -95,11 +95,16 @@ public class CorsairServer extends MrServer {
 		}
 	}
 	
+	// The standard version logs local and external phone count.
 	public void GetGroupAllUserPhone(final int grpID) {
 		final AtomicInteger endCount = new AtomicInteger();
 		final Vector<String> phones = new Vector<String>(
 				Arrays.asList(db.getGroupLocalUserPhone(grpID)));
-		final String[] commuList = db.getGroupExternalCommu(localIP, grpID);
+		
+		StringBuilder log = new StringBuilder("Group ").append(grpID).append(':');
+		log.append(phones.size()).append('@').append(System.currentTimeMillis()).append('/');
+		
+		final String[] commuList = db.getGroupExternalCommu(nodeName, grpID);
 		String[] commuPlusAddr;
 		for (String commu : commuList) {
 			commuPlusAddr = commu.split("@");
@@ -146,11 +151,13 @@ public class CorsairServer extends MrServer {
 		}
 		
 		preturn(phones.toArray());
+		log.append(phones.size()).append('@').append(System.currentTimeMillis());
+		System.out.println(log.toString());
 	}
 	
 	private DBAgent db;
 	private long timeout;
-	String localIP;
+	String nodeName;
 	int port;
 	
 	/**
