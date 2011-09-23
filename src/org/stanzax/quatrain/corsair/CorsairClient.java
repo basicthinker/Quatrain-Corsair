@@ -79,13 +79,8 @@ public class CorsairClient {
 			avg /= phoneList.size();
 		}
 		
-		log.print(method + ":\t" + grpID + "\t");
-		log.print(phoneList.size() + "\t" + avg + "\t");
-		Collections.sort(phoneList); // for convenience of correctness verification
-		for (String element : phoneList) {
-			log.print("\t" + element);
-		}
-		log.println();
+		log.print(method + " for " + grpID + "\t");
+		log.println(phoneList.size() + "\t" + avg);
 		
 		return avg;
 	}
@@ -108,7 +103,7 @@ public class CorsairClient {
 			PrintStream log = new PrintStream(
 					new File("log-corsair-client-" + args[0] + "@" + 
 							String.valueOf(System.currentTimeMillis()).substring(4)));
-			log.println("# GroupID\tPhoneCount\tAvgResponseTime\t\tPhoneList");
+			log.println("# GroupID\tPhoneCount\tAvgResponseTime");
 			
 			CorsairClient client = new CorsairClient(
 					InetAddress.getByName(args[0]), port, timeout, log);
