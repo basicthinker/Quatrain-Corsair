@@ -10,7 +10,7 @@ echo ">>> Begin of ping stage"
 i=1
 for node in $NODE_LIST
 do
-  echo "Starting evaluation of ping on node-$i..."
+  echo "Starting ping on node-$i..."
   ssh root@$node 'for node in '$NODE_LIST'; do ping -c 3 $node > /dev/null; ping -q -c '$PING_CNT' $node; done' > ping-node$i-`date +%s`.log &
   ((++i))
 done
@@ -22,7 +22,7 @@ i=1
 for node in $NODE_LIST
 do
   echo "Starting evaluation client on node-$i..."
-  ssh root@$node "nohup java -jar ~/corsair-client.jar $node $PORT $LIMIT 20000" > node$i.log &
+  ssh root@$node "nohup java -jar ~/corsair-client.jar $node $PORT $LIMIT 30000" > node$i.log &
   ((++i))
 done
 wait

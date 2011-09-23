@@ -6,6 +6,7 @@ cd ..
 DB_FILE='database/corsair-db-all.sql'
 PORT=3500
 NODE_LIST=`cat node.list`
+SERVER_LIST=(`cat server-ip.list`)
 
 if [ -f $DB_FILE ]; then
   echo ">>> Using existing $DB_FILE"
@@ -29,7 +30,7 @@ else
     DB_NAMES=$DB_NAMES" corsair_lmr_$i"
     ((++i))
   done
-  mysqldump -u $DB_USER -p$DB_PASSWD --databases $DB_NAMES --add-drop-database > $DB_FILE
+  mysqldump -u $DB_USER -p$DB_PASSWD --databases $DB_NAMES --add-drop-database --routines > $DB_FILE
 fi
 
 if [ ! -f ~/.ssh/id_dsa.pub ]; then
@@ -97,8 +98,8 @@ wait
 i=1
 for node in $NODE_LIST
 do
-  ssh root@$node "nohup java -jar ~/corsair-server.jar $node $PORT 100 corsair_lmr_$i $DB_USER $DB_PASSWD 20000 > ~/server.output 2 >& 1 &"
-  ssh root@$node "sleep 1; cat ~/server.output"
+  ssh root@$node "nohup java -jar ~/corsair-server.jar ${SERVER_LIST[$((i-1))]} $PORT 100 corsair_lmr_$i $DB_USER $DB_PASSWD 20000 > ~/server.output 2>&1 & \
+    sleep 1 ; cat ~/server.output"
   ((++i))
 done
 echo "<<< Services started!"
