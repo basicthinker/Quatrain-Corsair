@@ -251,29 +251,28 @@ BEGIN
 END;
 
 -- --------------------------------------------------------------------
--- 通过校际通讯组的IP地址和ID号获得其所有外校社区IP地址和ID号
+-- 通过校际通讯组的结点名称和ID号获得其所有外校社区IP地址和ID号
 -- Parameters:
---   lmr_ip: ip address of local manager 
---   grp_id: local id of target group
+--   lmr_name: name of local manager 
+--   grp_local_id: local id of target group
 -- Returns:
 --   required ip address(es) and community id(s) on success,
 --   or empty table on failure
 -- ---------------------------------------------------------------------
 DROP PROCEDURE IF EXISTS sp_fetch_grp_xtnl_commu;
 CREATE PROCEDURE sp_fetch_grp_xtnl_commu (
-  IN lmr_ip VARCHAR(20),
-  IN grp_id INT UNSIGNED
+  IN lmr_name VARCHAR(50),
+  IN grp_local_id INT UNSIGNED
 )
 BEGIN
   DECLARE grp_mgr_id INT UNSIGNED;
-  DECLARE grp_local_id INT UNSIGNED;
   
-  SELECT G.local_mgr_id, G.local_id 
-  INTO grp_mgr_id, grp_local_id
+  SELECT G.local_mgr_id
+  INTO grp_mgr_id
   FROM smr_overall_grp AS G
     JOIN smr_local_mgr AS M
     ON G.local_mgr_id = M.id
-  WHERE M.ip_address = lmr_ip AND G.local_id = grp_id;
+  WHERE M.name = lmr_name AND G.local_id = grp_local_id;
 
   SELECT M.ip_address, C.local_id
   FROM smr_grp_commu AS GC
