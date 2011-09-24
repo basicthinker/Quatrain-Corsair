@@ -1,4 +1,5 @@
 #! /bin/bash
+LOG_DIR='log'
 NODE_LIST=`cat node.list`
 PORT=3500
 PING_CNT=5
@@ -11,7 +12,7 @@ i=1
 for node in $NODE_LIST
 do
   echo "Starting ping on node-$i..."
-  ssh root@$node 'for node in '$NODE_LIST'; do ping -c 3 $node > /dev/null; ping -q -c '$PING_CNT' $node; done' > ping-node$i-`date +%s`.log &
+  ssh root@$node 'for node in '$NODE_LIST'; do ping -c 3 $node > /dev/null; ping -q -c '$PING_CNT' $node; done' > $LOG_DIR/ping-node$i-`date +%s`.log &
   ((++i))
 done
 wait
@@ -22,7 +23,7 @@ i=1
 for node in $NODE_LIST
 do
   echo "Starting evaluation client on node-$i..."
-  ssh root@$node "nohup java -jar ~/corsair-client.jar $node $PORT $LIMIT 30000" > node$i.log &
+  ssh root@$node "nohup java -jar ~/corsair-client.jar $node $PORT $LIMIT 30000" > $LOG_DIR/node$i.log &
   ((++i))
 done
 wait
@@ -32,8 +33,8 @@ echo -e "# NodeNum\tNormalTime\tMrTime" > $EVA_LOG
 i=1
 for node in $NODE_LIST
 do
-  value=`cat "node$i.log"`
+  value=`cat $LOG_DIR/node$i.log`
   echo -e "$i\t$value" >> $EVA_LOG;
-  rm node$i.log
+  rm $LOG_DIR/node$i.log
   ((++i))
 done

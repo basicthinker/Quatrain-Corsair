@@ -1,7 +1,7 @@
 #! /bin/bash
 DB_USER=root
 DB_PASSWD=tsinghua
-NODE_LIST=`cat node.list`
+NODE_LIST=`cat ../node.list`
 
   # reset IPs in case that nodes are not ready when DB is built
   echo 'USE corsair_smr;' > tmp.sql

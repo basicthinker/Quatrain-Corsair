@@ -1,17 +1,17 @@
 #! /bin/bash
-cd database
-source header.sh
-cd ..
-
+DB_USER=root
+DB_PASSWD=tsinghua
 PORT=3500
-NODE_LIST=`cat node.list`
-SERVER_LIST=(`cat server-ip.list`)
+ROOT='..'
+
+NODE_LIST=`cat $ROOT/node.list`
+SERVER_LIST=(`cat $ROOT/server-ip.list`)
 
 echo ">>> Copying files..."
 for node in $NODE_LIST
 do
-  scp corsair-client.jar root@$node:~/ &
-  scp corsair-server.jar root@$node:~/ &
+  scp $ROOT/corsair-client.jar root@$node:~/ &
+  scp $ROOT/corsair-server.jar root@$node:~/ &
 done
 wait
 echo "<<< End copying..."
