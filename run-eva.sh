@@ -2,8 +2,8 @@
 LOG_DIR='log'
 NODE_LIST=`cat node.list`
 PORT=3500
-PING_CNT=50
-LIMIT=50
+PING_CNT=100
+LIMIT=100
 NOFILE=65535
 
 EVA_LOG=eva-`date +%s`.log
@@ -31,7 +31,7 @@ for node in $NODE_LIST
 do
   echo "Starting evaluation client on node-$i..."
   ssh root@$node "ulimit -SHn $NOFILE; \
-    nohup java -jar ~/corsair-client.jar $node $PORT $LIMIT 10000 200" > $LOG_DIR/node$i.log &
+    nohup java -jar ~/corsair-client.jar $node $PORT $LIMIT 10000 0" > $LOG_DIR/node$i.log &
   ((++i))
 done
 wait
