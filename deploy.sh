@@ -7,6 +7,7 @@ DB_FILE='database/corsair-db-all.sql'
 PORT=3500
 NODE_LIST=`cat node.list`
 SERVER_LIST=(`cat server-ip.list`)
+NOFILE=65535
 
 if [ -f $DB_FILE ]; then
   echo ">>> Using existing $DB_FILE"
@@ -89,18 +90,20 @@ echo ">>> Begin starting services..."
 
 for node in $NODE_LIST
 do
-  scp corsair-server.jar root@$node:~/ &
-  scp corsair-client.jar root@$node:~/ &
-  scp mysql-connector-java-5.1.17-bin.jar root@$node:/usr/lib/jvm/default-java/jre/lib/ext/ &
+  scp bin/corsair-server.jar root@$node:~/ &
+  scp bin/corsair-client.jar root@$node:~/ &
+  scp bin/mysql-connector-java-5.1.17-bin.jar root@$node:/usr/lib/jvm/default-java/jre/lib/ext/ &
 done
 wait
 
 i=1
 for node in $NODE_LIST
 do
-  ssh root@$node "nohup java -jar ~/corsair-server.jar ${SERVER_LIST[$((i-1))]} $PORT 100 corsair_lmr_$i $DB_USER $DB_PASSWD 20000 > ~/server.output 2>&1 & \
-    sleep 1 ; cat ~/server.output"
+  ssh root@$node "ps aux | grep 'corsair' | grep -v 'grep' | awk '{print \$2}' | xargs kill -9 ; \
+    ulimit -SHn $NOFILE; \
+    nohup java -jar ~/corsair-server.jar ${SERVER_LIST[$((i-1))]} $PORT 100 corsair_lmr_$i $DB_USER $DB_PASSWD 8000 > ~/server.output 2>&1 & \
+    sleep 1 ; cat ~/server.output ; ulimit -n;" &
   ((++i))
 done
+wait
 echo "<<< Services started!"
-
