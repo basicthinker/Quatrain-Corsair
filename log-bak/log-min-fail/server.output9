@@ -1,0 +1,7 @@
+All registered procedures:
+ - GetLocalGroupList
+ - MrGetGroupAllUserPhone
+ - GetCommuLocalUserPhone
+ - GetGroupAllUserPhone
+Please garantee no extra methods exit for security concern.
+# -> INFO @2011-09-24 07:49:17:257 - Quatrain Service Starts. This is an event-based server.

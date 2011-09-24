@@ -1,0 +1,50 @@
+PING 107.20.156.38 (107.20.156.38) 56(84) bytes of data.
+
+--- 107.20.156.38 ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 99173ms
+rtt min/avg/max/mdev = 2.567/2.656/2.849/0.071 ms
+PING 50.18.189.188 (50.18.189.188) 56(84) bytes of data.
+
+--- 50.18.189.188 ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 99176ms
+rtt min/avg/max/mdev = 76.595/76.727/76.992/0.331 ms
+PING 46.137.160.158 (46.137.160.158) 56(84) bytes of data.
+
+--- 46.137.160.158 ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 99147ms
+rtt min/avg/max/mdev = 97.386/97.452/97.655/0.176 ms
+PING 122.248.237.92 (122.248.237.92) 56(84) bytes of data.
+
+--- 122.248.237.92 ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 99079ms
+rtt min/avg/max/mdev = 229.784/243.784/252.851/8.838 ms
+PING 176.32.88.179 (176.32.88.179) 56(84) bytes of data.
+
+--- 176.32.88.179 ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 99131ms
+rtt min/avg/max/mdev = 177.216/190.949/204.651/8.224 ms
+PING 50.56.110.34 (50.56.110.34) 56(84) bytes of data.
+
+--- 50.56.110.34 ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 99168ms
+rtt min/avg/max/mdev = 16.711/16.823/17.013/0.149 ms
+PING 209.114.38.52 (209.114.38.52) 56(84) bytes of data.
+
+--- 209.114.38.52 ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 99143ms
+rtt min/avg/max/mdev = 35.234/35.354/35.520/0.072 ms
+PING 31.222.189.137 (31.222.189.137) 56(84) bytes of data.
+
+--- 31.222.189.137 ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 99138ms
+rtt min/avg/max/mdev = 76.180/76.364/78.301/0.257 ms
+PING 173.204.195.36 (173.204.195.36) 56(84) bytes of data.
+
+--- 173.204.195.36 ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 98992ms
+rtt min/avg/max/mdev = 0.021/0.035/0.048/0.007 ms
+PING 173.204.76.66 (173.204.76.66) 56(84) bytes of data.
+
+--- 173.204.76.66 ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 99145ms
+rtt min/avg/max/mdev = 74.707/75.023/75.662/0.363 ms

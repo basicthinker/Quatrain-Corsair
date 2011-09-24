@@ -1,0 +1,727 @@
+All registered procedures:
+ - GetLocalGroupList
+ - MrGetGroupAllUserPhone
+ - GetCommuLocalUserPhone
+ - GetGroupAllUserPhone
+Please garantee no extra methods exit for security concern.
+# -> INFO @2011-09-24 02:49:16:095 - Quatrain Service Starts. This is an event-based server.
+Group 243:60@1316877305602/78@1316877306303
+Group 243:60@1316877307326/78@1316877307956
+Group 243:60@1316877309039/78@1316877309743
+Group 119:50@1316877310645/68@1316877311319
+Group 119:50@1316877312337/68@1316877312934
+Group 119:50@1316877313898/68@1316877314503
+Group 421:47@1316877315528/71@1316877316099
+Group 421:47@1316877316995/71@1316877317645
+Group 421:47@1316877318658/71@1316877319204
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 375:54@1316877320272/63@1316877328601
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 375:54@1316877337361/63@1316877345659
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 375:54@1316877354392/63@1316877362709
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 302:62@1316877371329/69@1316877371535
+Group 302:62@1316877372098/69@1316877372311
+Group 302:62@1316877372806/69@1316877373017
+Group 501:55@1316877373610/65@1316877374218
+Group 501:55@1316877375271/65@1316877375799
+Group 501:55@1316877376790/65@1316877377357
+@MrClient.invoke: Connection refused
+Group 440:39@1316877378311/60@1316877386603
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 440:39@1316877395321/60@1316877403617
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 440:39@1316877412256/60@1316877420590
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 220:29@1316877429244/61@1316877437546
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 220:29@1316877446294/61@1316877454588
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 220:29@1316877463283/61@1316877471580
+@MrClient.invoke: Connection refused
+Group 320:40@1316877480284/65@1316877480856
+Group 320:40@1316877481831/65@1316877482412
+Group 320:40@1316877483662/65@1316877484318
+Group 230:63@1316877485253/73@1316877485821
+Group 230:63@1316877486842/73@1316877487451
+Group 230:63@1316877488446/73@1316877489055
+Group 161:52@1316877490059/71@1316877490651
+Group 161:52@1316877491711/71@1316877492298
+Group 161:52@1316877493294/71@1316877493888
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 168:35@1316877494887/42@1316877503191
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 168:35@1316877511898/42@1316877520265
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 168:35@1316877528938/42@1316877537264
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 279:56@1316877545992/66@1316877554296
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 279:56@1316877563026/66@1316877571330
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 279:56@1316877580082/66@1316877588396
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 349:60@1316877597110/75@1316877597692
+Group 349:60@1316877598630/75@1316877599195
+Group 349:60@1316877600210/75@1316877600811
+@MrClient.invoke: Connection refused
+Group 319:51@1316877601827/67@1316877610122
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 319:51@1316877618772/67@1316877627059
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 319:51@1316877635774/67@1316877644074
+@MrClient.invoke: Connection refused
+Group 314:39@1316877652887/87@1316877653502
+Group 314:39@1316877654507/87@1316877655120
+Group 314:39@1316877656242/87@1316877656869
+@MrClient.invoke: Connection refused
+Group 87:38@1316877658002/42@1316877666356
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 87:38@1316877675007/42@1316877683286
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 87:38@1316877691917/42@1316877700279
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 465:29@1316877708946/43@1316877717302
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 465:29@1316877725947/43@1316877734246
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 465:29@1316877742888/43@1316877751169
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 450:55@1316877759979/66@1316877768270
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 450:55@1316877777136/66@1316877785433
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 450:55@1316877794193/66@1316877802492
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 241:48@1316877811172/61@1316877819449
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 241:48@1316877828098/61@1316877836397
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 241:48@1316877845213/61@1316877853568
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 313:51@1316877862306/93@1316877870624
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 313:51@1316877879275/93@1316877887602
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 313:51@1316877896420/93@1316877904734
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 512:61@1316877913505/81@1316877914082
+Group 512:61@1316877915125/81@1316877915695
+Group 512:61@1316877916701/81@1316877917344
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 234:71@1316877918421/78@1316877926717
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 234:71@1316877935377/78@1316877943694
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 234:71@1316877952422/78@1316877960753
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 290:52@1316877969399/73@1316877977681
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 290:52@1316877986499/73@1316877994815
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 290:52@1316878003660/73@1316878011962
+@MrClient.invoke: Connection refused
+Group 485:48@1316878020741/62@1316878021369
+Group 485:48@1316878022362/62@1316878022913
+Group 485:48@1316878023769/62@1316878024392
+Group 304:27@1316878025403/31@1316878025959
+Group 304:27@1316878026760/31@1316878027226
+Group 304:27@1316878028142/31@1316878028571
+Group 405:82@1316878029518/106@1316878030108
+Group 405:82@1316878031155/106@1316878031814
+Group 405:82@1316878032965/106@1316878033535
+@MrClient.invoke: Connection refused
+Group 11:58@1316878034515/83@1316878042816
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 11:58@1316878051499/83@1316878059814
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 11:58@1316878068529/83@1316878076876
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 310:39@1316878085555/80@1316878093936
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 310:39@1316878102642/80@1316878110940
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 310:39@1316878119654/80@1316878127965
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 481:40@1316878136799/55@1316878137358
+Group 481:40@1316878138410/55@1316878138965
+Group 481:40@1316878139862/55@1316878140410
+Group 68:31@1316878141406/71@1316878141990
+Group 68:31@1316878143015/71@1316878143584
+Group 68:31@1316878144626/71@1316878145234
+@MrClient.invoke: Connection refused
+Group 92:27@1316878146422/66@1316878154730
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 92:27@1316878163363/66@1316878171651
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 92:27@1316878180299/66@1316878188619
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 413:40@1316878197365/72@1316878205654
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 413:40@1316878214303/72@1316878222586
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 413:40@1316878231283/72@1316878239592
+@MrClient.invoke: Connection refused
+Group 412:35@1316878248355/51@1316878249019
+Group 412:35@1316878250209/51@1316878250818
+Group 412:35@1316878251943/51@1316878252557
+Group 183:17@1316878253580/38@1316878254201
+Group 183:17@1316878255272/38@1316878256083
+Group 183:17@1316878257102/38@1316878257725
+Group 487:48@1316878258745/75@1316878260067
+Group 487:48@1316878261194/75@1316878261735
+Group 487:48@1316878262879/75@1316878263413
+Group 364:25@1316878264288/32@1316878264900
+Group 364:25@1316878265892/32@1316878266419
+Group 364:25@1316878267363/32@1316878267896
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 176:20@1316878268872/39@1316878277179
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 176:20@1316878285852/39@1316878294204
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 176:20@1316878303030/39@1316878311329
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 190:35@1316878320002/71@1316878328298
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 190:35@1316878337098/71@1316878345388
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 190:35@1316878354179/71@1316878362500
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 475:79@1316878371303/101@1316878371894
+Group 475:79@1316878372742/101@1316878373381
+Group 475:79@1316878374373/101@1316878374953
+@MrClient.invoke: Connection refused
+Group 52:28@1316878375932/44@1316878384224
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 52:28@1316878392919/44@1316878401217
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 52:28@1316878409861/44@1316878418220
+@MrClient.invoke: Connection refused
+Group 69:45@1316878426962/66@1316878427545
+Group 69:45@1316878428569/66@1316878429259
+Group 69:45@1316878430269/66@1316878430866
+Group 439:54@1316878432013/83@1316878432595
+Group 439:54@1316878433595/83@1316878434213
+Group 439:54@1316878435161/83@1316878435776
+@MrClient.invoke: Connection refused
+Group 43:38@1316878436795/61@1316878445115
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 43:38@1316878453782/61@1316878462085
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 43:38@1316878470802/61@1316878479081
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 358:37@1316878487732/64@1316878496048
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 358:37@1316878504719/64@1316878513060
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 358:37@1316878521725/64@1316878530029
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 103:36@1316878538611/63@1316878546923
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 103:36@1316878555649/63@1316878563969
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 103:36@1316878572642/63@1316878580969
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 315:48@1316878589674/73@1316878597973
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 315:48@1316878606635/73@1316878615031
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 315:48@1316878623838/73@1316878632122
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 435:27@1316878640782/54@1316878649090
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 435:27@1316878657910/54@1316878666206
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 435:27@1316878674986/54@1316878683374
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 202:55@1316878692112/68@1316878692695
+Group 202:55@1316878693658/68@1316878694262
+Group 202:55@1316878695257/68@1316878695810
+Group 6:63@1316878696800/69@1316878697407
+Group 6:63@1316878698322/69@1316878698898
+Group 6:63@1316878699851/69@1316878700478
+Group 142:41@1316878701477/62@1316878702083
+Group 142:41@1316878702983/62@1316878703592
+Group 142:41@1316878704509/62@1316878705048
+Group 97:68@1316878705976/92@1316878706566
+Group 97:68@1316878707512/92@1316878708106
+Group 97:68@1316878709187/92@1316878709845
+Group 66:40@1316878710914/46@1316878711446
+Group 66:40@1316878712425/46@1316878713001
+Group 66:40@1316878713951/46@1316878714518
+@MrClient.invoke: Connection refused
+Group 431:30@1316878715489/33@1316878723791
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 431:30@1316878732442/33@1316878740736
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 431:30@1316878749466/33@1316878757767
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 144:41@1316878766431/60@1316878774719
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 144:41@1316878783465/60@1316878791755
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 144:41@1316878800480/60@1316878808793
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 159:62@1316878817588/106@1316878825881
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 159:62@1316878834660/106@1316878842954
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 159:62@1316878851705/106@1316878860043
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 291:53@1316878868763/76@1316878877044
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 291:53@1316878885674/76@1316878894031
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 291:53@1316878902708/76@1316878910996
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 483:62@1316878919644/62@1316878927982
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 483:62@1316878936625/62@1316878944938
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 483:62@1316878953605/62@1316878961902
+@MrClient.invoke: Connection refused
+Group 330:36@1316878970542/55@1316878971177
+Group 330:36@1316878972175/55@1316878972783
+Group 330:36@1316878973941/55@1316878974537
+Group 117:51@1316878975526/71@1316878976175
+Group 117:51@1316878977209/71@1316878977802
+Group 117:51@1316878978916/71@1316878979535
+Group 221:55@1316878980609/83@1316878981266
+Group 221:55@1316878982258/83@1316878982827
+Group 221:55@1316878983814/83@1316878984385
+Group 125:71@1316878985283/92@1316878985796
+Group 125:71@1316878986650/92@1316878987215
+Group 125:71@1316878988063/92@1316878988649
+Group 15:41@1316878989569/52@1316878990164
+Group 15:41@1316878991104/52@1316878991671
+Group 15:41@1316878992537/52@1316878993078
+Group 484:26@1316878993992/54@1316878994642
+Group 484:26@1316878995789/54@1316878996364
+Group 484:26@1316878997307/54@1316878997919
+Group 476:46@1316878998880/65@1316878999425
+Group 476:46@1316879000404/65@1316879000969
+Group 476:46@1316879001956/65@1316879002521
+@MrClient.invoke: Connection refused
+Group 458:59@1316879003384/63@1316879011738
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 458:59@1316879020449/63@1316879028763
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 458:59@1316879037441/63@1316879045813
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 350:23@1316879054533/40@1316879062814
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 350:23@1316879071534/40@1316879079829
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 350:23@1316879088490/40@1316879096784
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 419:45@1316879105518/81@1316879113845
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 419:45@1316879122633/81@1316879130936
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 419:45@1316879139663/81@1316879147970
+@MrClient.invoke: Connection refused
+Group 382:42@1316879156581/54@1316879157330
+Group 382:42@1316879158390/54@1316879158984
+Group 382:42@1316879160181/54@1316879160767
+Group 127:59@1316879161799/91@1316879162465
+Group 127:59@1316879163566/91@1316879164163
+Group 127:59@1316879165101/91@1316879165681
+Group 354:44@1316879166813/54@1316879167380
+Group 354:44@1316879168342/54@1316879168894
+Group 354:44@1316879169874/54@1316879170470
+@MrClient.invoke: Connection refused
+Group 179:18@1316879171381/54@1316879179680
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 179:18@1316879188382/54@1316879196682
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 179:18@1316879205384/54@1316879213684
+@MrClient.invoke: Connection refused
+Group 283:52@1316879222263/53@1316879222716
+Group 283:52@1316879223553/53@1316879224046
+Group 283:52@1316879224930/53@1316879225368
+Group 326:35@1316879226216/71@1316879226818
+Group 326:35@1316879227814/71@1316879228409
+Group 326:35@1316879229457/71@1316879230052
+Group 289:34@1316879231047/69@1316879231592
+Group 289:34@1316879232562/69@1316879233157
+Group 289:34@1316879234198/69@1316879234750
+Group 236:46@1316879235883/67@1316879236522
+Group 236:46@1316879237729/67@1316879238369
+Group 236:46@1316879239398/67@1316879239990
+Group 83:14@1316879241082/32@1316879241664
+Group 83:14@1316879242596/32@1316879243170
+Group 83:14@1316879244180/32@1316879244831
+@MrClient.invoke: Connection refused
+Group 347:43@1316879245861/74@1316879254149
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 347:43@1316879262789/74@1316879271159
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 347:43@1316879279820/74@1316879288104
+@MrClient.invoke: Connection refused
+Group 33:63@1316879296757/87@1316879297354
+Group 33:63@1316879298392/87@1316879299027
+Group 33:63@1316879300044/87@1316879300689
+Group 317:23@1316879301616/26@1316879302115
+Group 317:23@1316879302938/26@1316879303557
+Group 317:23@1316879304277/26@1316879304767
+@MrClient.invoke: Connection refused
+Group 128:46@1316879305500/72@1316879313865
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 128:46@1316879322479/72@1316879330833
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 128:46@1316879339578/72@1316879347850
+@MrClient.invoke: Connection refused
+Group 433:26@1316879356554/39@1316879357218
+Group 433:26@1316879358177/39@1316879358838
+Group 433:26@1316879359733/39@1316879360331
+@MrClient.invoke: Connection refused
+Group 65:30@1316879361436/43@1316879369741
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 65:30@1316879378456/43@1316879386763
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 65:30@1316879395496/43@1316879403797
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 502:32@1316879412544/40@1316879420891
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 502:32@1316879429570/40@1316879437870
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 502:32@1316879446510/40@1316879454865
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 470:59@1316879463532/86@1316879471894
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 470:59@1316879480642/86@1316879488956
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 470:59@1316879497629/86@1316879505994
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 386:56@1316879514715/89@1316879523015
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 386:56@1316879531679/89@1316879539976
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 386:56@1316879548762/89@1316879557159
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 414:46@1316879565957/61@1316879566588
+Group 414:46@1316879567758/61@1316879568336
+Group 414:46@1316879569329/61@1316879570055
+Group 200:33@1316879571054/68@1316879571648
+Group 200:33@1316879572794/68@1316879573385
+Group 200:33@1316879574365/68@1316879574975
+@MrClient.invoke: Connection refused
+Group 215:51@1316879576038/60@1316879584333
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 215:51@1316879593015/60@1316879601306
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 215:51@1316879610029/60@1316879618309
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 72:86@1316879627008/96@1316879635294
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 72:86@1316879644144/96@1316879652417
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 72:86@1316879661189/96@1316879669501
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 488:46@1316879678250/60@1316879686555
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 488:46@1316879695502/60@1316879703822
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 488:46@1316879712641/60@1316879720938
+@MrClient.invoke: Connection refused
+Group 345:28@1316879729714/44@1316879730279
+Group 345:28@1316879731257/44@1316879731843
+Group 345:28@1316879732837/44@1316879733585
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 110:58@1316879734568/78@1316879742871
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 110:58@1316879751633/78@1316879759952
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 110:58@1316879768632/78@1316879776932
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 332:55@1316879785701/91@1316879786291
+Group 332:55@1316879787327/91@1316879787970
+Group 332:55@1316879788951/91@1316879789536
+Group 67:42@1316879790455/51@1316879791037
+Group 67:42@1316879791882/51@1316879792422
+Group 67:42@1316879793343/51@1316879793942
+Group 90:60@1316879794781/69@1316879795233
+Group 90:60@1316879796010/69@1316879796444
+Group 90:60@1316879797517/69@1316879797946
+@MrClient.invoke: Connection refused
+Group 429:43@1316879798642/62@1316879806953
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 429:43@1316879815597/62@1316879823938
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 429:43@1316879832693/62@1316879841062
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 367:29@1316879849763/32@1316879858063
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 367:29@1316879866809/32@1316879875126
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 367:29@1316879883788/32@1316879892095
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 40:45@1316879900798/51@1316879909075
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 40:45@1316879917774/51@1316879926084
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 40:45@1316879934719/51@1316879943055
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 398:87@1316879951758/87@1316879960052
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 398:87@1316879968704/87@1316879977004
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+Group 398:87@1316879985808/87@1316879994126
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused
+@MrClient.invoke: Connection refused

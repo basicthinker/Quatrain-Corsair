@@ -6,7 +6,7 @@ i=1
 for node in $NODE_LIST
 do
   scp root@$node:~/log-* $LOG_DIR &
-  ssh root@$node "cat ~/server.output | awk '/Group.*/'" > $LOG_DIR/server.output$i &
+  ssh root@$node "cat ~/server.output" > $LOG_DIR/server.output$i &
   ((++i))
 done
 wait

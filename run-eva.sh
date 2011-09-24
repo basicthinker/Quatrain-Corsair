@@ -38,7 +38,7 @@ wait
 
 echo "<<< End of evaluation"
 
-echo -e "# NodeNum\tNormalTime\tMrTime" > $EVA_LOG
+echo -e "# NodeNum\tStdTime\tMrTime" > $EVA_LOG
 i=1
 for node in $NODE_LIST
 do
