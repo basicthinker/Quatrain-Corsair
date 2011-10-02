@@ -1,5 +1,5 @@
 #! /bin/bash
-ROOT='../log'
+ROOT='../log-bak/log-normal-100'
 NODE_CNT=10
 
 LOG_FILE="$ROOT/ping-node.log"
@@ -16,19 +16,20 @@ do
     }
     {
       if ($1=="rtt") {
-        split($4, times, "/");
-        avg+=times[2];
+        split($4, times, "/");        
         ++cnt;
         if (times[2] > max) max=times[2];
         if (cnt != '$i' && times[2] < min)
           min=times[2];
+        if (cnt != '$i')
+          avg+=times[2];
       }
     }
     END {
       if (cnt != '$NODE_CNT') {
         print "ERROR";
       } else {
-        printf "%.3f %.3f", avg/cnt, max - min;
+        printf "%.3f %.3f", avg/(cnt-1), max - min;
       }
     }'`
   echo "$i $value" >> $LOG_FILE
