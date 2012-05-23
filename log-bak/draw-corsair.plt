@@ -1,10 +1,9 @@
-set terminal postscript eps color enhanced font 22
+set terminal postscript eps color enhanced font 24
 set size 1,1
 set output "eva-corsair.eps"
 set style fill pattern 2 border -1
 set style data histograms
 set style histogram cluster gap 1
-set xlabel 'Instance'
 set ylabel 'AAT (ms)'
 set yrange [100:5000]
 set ytics ("100" 100, "200" 200, "" 300, "400" 400, "" 500, "600" 600, "" 700, "800" 800, "" 900, "1000" 1000, "2000" 2000, "3000" 3000, "4000" 4000)
