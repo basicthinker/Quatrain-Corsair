@@ -1,8 +1,8 @@
-set terminal postscript eps color enhanced font 20
+set terminal postscript eps enhanced font 20
 set output "eva-corsair-ping.eps"
 set size 1, 0.7
 
-set style fill solid 1 border -1
+set style fill pattern 3 border 0
 set style data histograms
 set style histogram cluster
 set xlabel 'Instance sending ECHO\_REQUEST'

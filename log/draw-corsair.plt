@@ -1,4 +1,4 @@
-set terminal postscript eps color enhanced font 24
+set terminal postscript eps enhanced font 24
 set size 1,1
 set output "eva-corsair.eps"
 set style fill pattern 2 border -1
